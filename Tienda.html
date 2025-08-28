@@ -27,6 +27,13 @@
       </ul>
     </div>
   </nav>
+
+  <ul class="sidenav" id="mobile-menu">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#tienda">Tienda</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+
   <!-- Hero -->
   <header>
     <div class="container center">
@@ -43,29 +50,51 @@
         <div class="carousel">
           <!-- Cámara 1 -->
           <a class="carousel-item" href="#!">
-            <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90" alt="Cámara 1">
-            <span class="card-title">Cámara Canon AE-1</span>
-            <p><strong>$150 USD</strong></p>
-            <p>Una clásica cámara de 35mm, ideal para principiantes y fotógrafos experimentados.</p>
-            <a href="#" class="btn-small black">Añadir al Carrito</a>
+            <div class="card">
+              <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90" alt="Cámara 1">
+                <span class="card-title">Cámara Canon AE-1</span>
+              </div>
+              <div class="card-content">
+                <p><strong>$140.000 CLP</strong></p>
+                <p>Una clásica cámara de 35mm, ideal para principiantes y fotógrafos experimentados.</p>
+              </div>
+              <div class="card-action center">
+                <a href="#" class="btn-small black">Añadir al Carrito</a>
+              </div>
+            </div>
           </a>
-
           <!-- Cámara 2 -->
           <a class="carousel-item" href="#!">
-            <img src="https://images.unsplash.com/photo-1555685812-4b943f1cb0eb" alt="Cámara 2">
-            <span class="card-title">Cámara Nikon F2</span>
-            <p><strong>$250.000 </strong></p>
-            <p>Cámara robusta y fiable, perfecta para proyectos fotográficos profesionales.</p>
-            <a href="#" class="btn-small black">Añadir al Carrito</a>
+            <div class="card">
+              <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1555685812-4b943f1cb0eb" alt="Cámara 2">
+                <span class="card-title">Cámara Nikon F2</span>
+              </div>
+              <div class="card-content">
+                <p><strong>$230.000 CLP</strong></p>
+                <p>Cámara robusta y fiable, perfecta para proyectos fotográficos profesionales.</p>
+              </div>
+              <div class="card-action center">
+                <a href="#" class="btn-small black">Añadir al Carrito</a>
+              </div>
+            </div>
           </a>
-
           <!-- Cámara 3 -->
           <a class="carousel-item" href="#!">
-            <img src="https://images.unsplash.com/photo-1580894894514-54bfa3a6fd3c" alt="Cámara 3">
-            <span class="card-title">Cámara Pentax K1000</span>
-            <p><strong>$130.000 </strong></p>
-            <p>Perfecta para estudiantes y fotógrafos que buscan una cámara manual confiable.</p>
-            <a href="#" class="btn-small black">Añadir al Carrito</a>
+            <div class="card">
+              <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1580894894514-54bfa3a6fd3c" alt="Cámara 3">
+                <span class="card-title">Cámara Pentax K1000</span>
+              </div>
+              <div class="card-content">
+                <p><strong>$120.000 CLP</strong></p>
+                <p>Perfecta para estudiantes y fotógrafos que buscan una cámara manual confiable.</p>
+              </div>
+              <div class="card-action center">
+                <a href="#" class="btn-small black">Añadir al Carrito</a>
+              </div>
+            </div>
           </a>
         </div>
       </div>
@@ -125,6 +154,11 @@
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       M.AutoInit();
+      var elems = document.querySelectorAll('.carousel');
+      M.Carousel.init(elems, {
+        fullWidth: true,
+        indicators: true
+      });
     });
 
     // Carrito de compras
@@ -142,14 +176,14 @@
     }
 
     // Añadir productos al carrito
+    const productos = [
+      { nombre: 'Cámara Canon AE-1', precio: '$140.000 CLP' },
+      { nombre: 'Cámara Nikon F2', precio: '$230.000 CLP' },
+      { nombre: 'Cámara Pentax K1000', precio: '$120.000 CLP' },
+    ];
+
     document.querySelectorAll('.btn-small').forEach((boton, index) => {
       boton.addEventListener('click', function () {
-        const productos = [
-          { nombre: 'Cámara Canon AE-1', precio: '$150 USD' },
-          { nombre: 'Cámara Nikon F2', precio: '$250 USD' },
-          { nombre: 'Cámara Pentax K1000', precio: '$130 USD' },
-        ];
-
         carrito.push(productos[index]);
         actualizarCarrito();
       });
@@ -158,3 +192,4 @@
 
 </body>
 </html>
+``` 
