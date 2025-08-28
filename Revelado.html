@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Revelado - Revela3</title>
+
+  <!-- Materialize CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet" />
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="Styles.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="nav-wrapper container">
+      <a href="index.html" class="brand-logo">Revela3</a>
+      <a href="#" data-target="mobile-menu" class="sidenav-trigger"
+        ><i class="material-icons">menu</i></a
+      >
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html#servicios">Servicios</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-menu">
+    <li><a href="index.html#servicios">Servicios</a></li>
+    <li><a href="index.html#contacto">Contacto</a></li>
+  </ul>
+
+  <!-- Encabezado -->
+  <header>
+    <div class="center white-text" style="padding: 4rem 2rem;">
+      <h1>Servicio de Revelado</h1>
+      <p class="flow-text">Calidad profesional en cada fotograma</p>
+    </div>
+  </header>
+
+  <!-- Descripción -->
+  <section class="section container">
+    <h4 class="center">¿Qué incluye nuestro revelado?</h4>
+    <ul class="collection z-depth-1">
+      <li class="collection-item">✔ Revelado profesional de rollos de 35mm (color y blanco y negro)</li>
+      <li class="collection-item">✔ Procesos químicos seguros y estandarizados (C-41, B&W)</li>
+      <li class="collection-item">✔ Secado libre de polvo en cabina controlada</li>
+      <li class="collection-item">✔ Negativos entregados protegidos y etiquetados</li>
+    </ul>
+  </section>
+
+  <!-- Imagen ilustrativa -->
+  <div class="section center">
+    <img
+      src="https://images.unsplash.com/photo-1579783411359-8916b9f70371"
+      alt="Revelado de rollos"
+      class="responsive-img z-depth-2"
+      style="max-height: 400px; border-radius: 12px"
+    />
+  </div>
+
+  <!-- Precios -->
+  <section class="section container" id="precios">
+    <h4 class="center">Precios del Servicio (CLP)</h4>
+    <table class="striped centered z-depth-1">
+      <thead>
+        <tr>
+          <th>Tipo de Rollo</th>
+          <th>Proceso</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>35mm Color</td>
+          <td>C-41</td>
+          <td>$6.000 CLP</td>
+        </tr>
+        <tr>
+          <td>35mm Blanco y Negro</td>
+          <td>B&W Manual</td>
+          <td>$7.500 CLP</td>
+        </tr>
+        <tr>
+          <td>120mm Medio Formato</td>
+          <td>C-41 o B&W</td>
+          <td>$9.000 CLP</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Contacto -->
+  <section class="section container center" id="contactar">
+    <h5>¿Listo para revelar tus recuerdos?</h5>
+    <p class="flow-text">Haz clic para contactarnos y agendar tu entrega.</p>
+    <a href="index.html#contacto" class="btn">Contáctanos</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="black white-text center">
+    <div class="container">
+      <p>&copy; 2025 Revela3 | Servicio de Revelado</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      M.AutoInit();
+    });
+  </script>
+</body>
+</html>
