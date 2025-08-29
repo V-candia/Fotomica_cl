@@ -1,3 +1,10 @@
+/* Normalización de imágenes en cards del catálogo */
+.card .card-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
 
     header {
       background: url('https://images.unsplash.com/photo-1519183071298-a2962ae0b2cf') center/cover no-repeat;
