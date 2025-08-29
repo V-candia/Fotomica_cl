@@ -41,6 +41,12 @@
 /* Reset básico */
 body {
   background-color: var(--background-color);
+ /* Aqui poner img fondo */
+  background-image: url('');
+ /* ------------------- */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: var(--text-color);
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
