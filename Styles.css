@@ -7,7 +7,7 @@
 }
 
 header {
-  background: url('img/Banner.JPG') center/cover no-repeat;
+  background: url('img/banner2.png') center/cover no-repeat;
   background-blend-mode: overlay;
   background-color: rgba(250, 250, 250, 0.4);
   height: 40vh;
