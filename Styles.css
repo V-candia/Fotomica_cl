@@ -33,17 +33,19 @@ header {
 
 :root {
   --primary-color: #181818;
-  --accent-color: #ffd100; /* Amarillo Kodak */
+  --accent-color: #ffd100;
   --text-light: #f5f5f5;
-  --text-dark: #181818;
+  --text-dark: #222;
   --card-bg: #232323;
   --border-color: #222;
   --input-bg: #222;
   --input-border: #444;
-  --price-color: #222; /* Gris oscuro para precios */
+  --price-color: #fff;
+  --collection-bg: #f5f5f5;
+  --collection-text: #222;
 }
 
-/* Reset básico */
+/* Fondo y texto general */
 body {
   background: var(--primary-color);
   color: var(--text-light);
@@ -81,17 +83,20 @@ header p {
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.8);
   border: 1px solid var(--border-color);
-}
-.card:hover {
-  transform: translateY(-5px);
+  color: var(--text-light); /* Texto claro sobre fondo oscuro */
 }
 .card-title {
-  background-color: transparent;
-  padding: 4px 10px;
-  border-radius: 5px;
   color: var(--accent-color) !important;
   font-weight: 600;
   font-size: 1.2rem;
+}
+.card-content {
+  color: var(--text-light); /* Texto claro sobre fondo oscuro */
+}
+.card-content strong, .flip-card-back strong {
+  color: var(--price-color) !important; /* Precios en blanco puro */
+  font-weight: bold;
+  font-size: 1.15em;
 }
 
 /* Limitar tamaño de imágenes en flip-cards */
@@ -261,52 +266,7 @@ footer {
   border-radius: 8px;
 }
 
-/* Mejora de legibilidad para textos generales */
-p, li, span, .flow-text, .card-content, .flip-card-back, .flip-card-front {
-  color: var(--text-light) !important;
-}
-
-/* Textos destacados en amarillo Kodak solo en títulos principales */
-h1, h4, h6, .section h4, nav .brand-logo {
-  color: var(--accent-color) !important;
-  font-weight: 600;
-}
-
-/* Títulos secundarios y card-title en blanco suave */
-.card-title {
-  color: var(--text-light) !important;
-  font-weight: 600;
-}
-
-/* Mejora de visibilidad para precios y títulos de servicios */
-.card-content strong, .flip-card-back strong {
-  color: #fff !important;
-  font-weight: bold;
-  font-size: 1.15em;
-}
-
-.section h4 {
-  color: #222 !important;
-  font-weight: 700;
-  font-size: 2rem;
-  letter-spacing: 1px;
-  text-shadow: none;
-}
-
-/* Corrige visibilidad en items de colección (servicios, revelado, etc.) */
-.collection {
-  background: #f5f5f5 !important; /* Gris claro */
-  border-radius: 8px;
-  color: #222 !important; /* Texto oscuro */
-}
-
-.collection-item {
-  background: #f5f5f5 !important; /* Gris claro */
-  color: #222 !important; /* Texto oscuro */
-  border-bottom: 1px solid #ddd !important;
-  font-weight: 500;
-}
-
-.collection-item:last-child {
-  border-bottom: none !important;
+/* Textos generales: claros sobre fondo oscuro, oscuros sobre fondo claro */
+p, li, span, .flow-text {
+  color: inherit !important;
 }
