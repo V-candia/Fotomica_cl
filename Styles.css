@@ -97,9 +97,9 @@ header p {
 /* Limitar tamaño de imágenes en flip-cards */
 .flip-card-front .card-image img {
   width: 100%;
-  max-width: 220px;
-  height: 180px;
-  max-height: 180px;
+  max-width: 100%;
+  height: 220px;
+  max-height: 220px;
   object-fit: cover;
   margin-left: auto;
   margin-right: auto;
@@ -111,7 +111,7 @@ header p {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
+  height: 230px;
   background: transparent;
   margin-bottom: 10px;
 }
