@@ -101,6 +101,26 @@ header p {
   font-size: 1.15em;
 }
 
+/* Mejorar contraste de títulos en cards de la página de inicio */
+.services .card .card-image { position: relative; }
+.services .card .card-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.75) 100%);
+  z-index: 0;
+  pointer-events: none;
+}
+.services .card .card-title {
+  position: relative;
+  z-index: 1;
+  color: #fff !important; /* Título blanco para máximo contraste */
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.35);
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
 /* Limitar tamaño de imágenes en flip-cards */
 .flip-card-front .card-image img {
   width: 100%;
@@ -315,4 +335,13 @@ ul.collection > li.collection-item:last-child {
 
 body, html {
   font-family: 'Atkinson Hyperlegible', Arial, sans-serif;
+}
+
+/* Forzar fuente Atkinson en componentes que la sobrescriben (tablas y flip-cards) */
+table, thead, tbody, tfoot, tr, th, td,
+.striped, .highlight, .responsive-table,
+.flip-card-back, .flip-card-back h1, .flip-card-back h2, .flip-card-back h3, .flip-card-back h4, .flip-card-back h5, .flip-card-back h6,
+.flip-card-back p, .flip-card-back li, .flip-card-back button,
+.collection, .collection-item {
+  font-family: 'Atkinson Hyperlegible', Arial, sans-serif !important;
 }
