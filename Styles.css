@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
+
 /* Normalización de imágenes en cards del catálogo */
 .card .card-image img {
   width: 100%;
