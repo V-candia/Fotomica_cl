@@ -134,6 +134,13 @@ header p {
   text-align: center; /* títulos centrados y consistentes */
 }
 
+/* Centrar títulos en todas las cards */
+.card .card-image .card-title {
+  left: 8px !important;
+  right: 8px !important;
+  text-align: center !important;
+}
+
 /* Limitar tamaño de imágenes en flip-cards */
 .flip-card-front .card-image img {
   width: 100%;
@@ -357,4 +364,11 @@ table, thead, tbody, tfoot, tr, th, td,
 .flip-card-back p, .flip-card-back li, .flip-card-back button,
 .collection, .collection-item {
   font-family: 'Atkinson Hyperlegible', Arial, sans-serif !important;
+}
+
+/* Asegurar centrado en flip-cards si hay títulos dentro del contenido */
+.flip-card-front .card-content .card-title {
+  display: block;
+  width: 100%;
+  text-align: center;
 }
