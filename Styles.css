@@ -289,15 +289,16 @@ h4.section-title,
 .section .collection,
 .section .collection-item,
 .collection,
-.collection-item {
-  background-color: #232323 !important; /* Fondo oscuro */
-  color: #f5f5f5 !important;           /* Texto claro */
+.collection-item,
+ul.collection,
+ul.collection > li.collection-item {
+  background: #232323 !important; /* Fondo oscuro */
+  color: #f5f5f5 !important;     /* Texto claro */
   border-radius: 8px;
   border-bottom: 1px solid #333 !important;
 }
 
-.section .collection-item:last-child,
-.collection-item:last-child {
+ul.collection > li.collection-item:last-child {
   border-bottom: none !important;
 }
 
