@@ -249,3 +249,18 @@ footer {
   background: #ffd100;
   border-radius: 8px;
 }
+
+/* Mejora de legibilidad para textos generales */
+p, li, span, .flow-text, .card-content, .flip-card-back, .flip-card-front {
+  color: #f5f5f5 !important;
+}
+
+/* Textos destacados en amarillo Kodak */
+h1, h4, h6, .card-title, .section h4 {
+  color: #ffd100 !important;
+}
+
+/* Texto de precios y detalles importantes */
+.card-content strong, .flip-card-back strong {
+  color: #e60012 !important; /* Rojo Kodak para destacar */
+}
