@@ -292,3 +292,21 @@ h1, h4, h6, .section h4, nav .brand-logo {
   letter-spacing: 1px;
   text-shadow: none;
 }
+
+/* Corrige visibilidad en items de colección (servicios, revelado, etc.) */
+.collection {
+  background: #f5f5f5 !important; /* Gris claro */
+  border-radius: 8px;
+  color: #222 !important; /* Texto oscuro */
+}
+
+.collection-item {
+  background: #f5f5f5 !important; /* Gris claro */
+  color: #222 !important; /* Texto oscuro */
+  border-bottom: 1px solid #ddd !important;
+  font-weight: 500;
+}
+
+.collection-item:last-child {
+  border-bottom: none !important;
+}
