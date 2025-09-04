@@ -94,6 +94,15 @@ header p {
   padding: 4px 10px;
   border-radius: 5px;
 }
+/* Limitar tamaño de imágenes en flip-cards */
+.flip-card-front .card-image img {
+  width: 100%;
+  max-width: 220px;
+  height: 180px;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+}
 /* Flip Card Styles */
 .flip-card {
   background-color: transparent;
