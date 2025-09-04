@@ -96,12 +96,24 @@ header p {
 }
 /* Limitar tamaño de imágenes en flip-cards */
 .flip-card-front .card-image img {
-  width: 100%;
-  max-width: 220px;
-  height: 180px;
+  width: auto;
+  max-width: 180px;
+  height: 140px;
+  max-height: 140px;
   object-fit: cover;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   display: block;
+  border-radius: 10px;
+}
+
+.flip-card-front .card-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 160px;
+  background: transparent;
+  margin-bottom: 10px;
 }
 /* Flip Card Styles */
 .flip-card {
