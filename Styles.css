@@ -42,16 +42,8 @@ header {
 
 /* Reset básico */
 body {
-  background-color: var(--background-color);
- /* Aqui poner img fondo */
-  background-image: url('');
- /* ------------------- */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: var(--text-color);
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
+  background: #0a0a0a;
+  color: #f5f5f5;
   margin: 0;
   padding: 0;
 }
@@ -81,10 +73,10 @@ header p {
 
 /* Tarjetas */
 .card {
-  background-color: var(--card-bg);
+  background: #181818;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.8);
+  border: 1px solid #222;
 }
 .card:hover {
   transform: translateY(-5px);
@@ -93,6 +85,7 @@ header p {
   background-color: rgba(133, 117, 110, 0.589);
   padding: 4px 10px;
   border-radius: 5px;
+  color: #ffd100 !important; /* Amarillo Kodak */
 }
 /* Limitar tamaño de imágenes en flip-cards */
 .flip-card-front .card-image img {
@@ -140,7 +133,7 @@ header p {
   backface-visibility: hidden;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  background-color: var(--card-bg);
+  background: #181818;
 }
 .flip-card-front {
   z-index: 2;
@@ -173,6 +166,7 @@ header p {
   justify-content: center;
   padding: 20px;
   z-index: 3;
+  color: #f5f5f5;
 }
 .flip-btn {
   margin-top: 15px;
@@ -189,10 +183,11 @@ header p {
 input[type="text"],
 input[type="email"],
 textarea {
-  background-color: #ffffff;
+  background: #222 !important;
+  color: #ffd100 !important;
+  border: 1px solid #ffd100 !important;
   border-radius: 6px;
   padding: 0.8rem;
-  border: 1px solid #4e2e34;
 }
 input:focus,
 textarea:focus {
@@ -201,30 +196,55 @@ textarea:focus {
 }
 
 /* Botón */
-.btn {
-  background-color: var(--primary-color) !important;
+.btn, .btn-small {
+  background: #ffd100 !important; /* Amarillo Kodak */
+  color: #181818 !important;
   border-radius: 8px;
-  padding: 0 2rem;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(255,209,0,0.2);
+  transition: background 0.2s;
 }
-.btn:hover {
-  background-color: var(--accent-color) !important;
+.btn:hover, .btn-small:hover {
+  background: #e60012 !important; /* Rojo Kodak */
+  color: #fff !important;
 }
 
 /* Footer */
 footer {
-  background-color: var(--primary-color);
-  color: white;
+  background: #181818 !important;
+  color: #ffd100;
+  padding: 20px 0;
 }
 
 /* Sidenav */
 .sidenav {
-  background-color: var(--card-bg);
+  background: #181818;
+  color: #ffd100;
 }
 .sidenav a {
-  color: var(--primary-color);
+  color: #ffd100 !important;
 }
 
 /* Animación suave */
 * {
   transition: all 0.3s ease-in-out;
+}
+
+.carousel .carousel-item img {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(255,209,0,0.15);
+  border: 2px solid #ffd100;
+}
+
+.instagram-link img {
+  border: 2px solid #e60012; /* Rojo Kodak */
+}
+
+::-webkit-scrollbar {
+  background: #181818;
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffd100;
+  border-radius: 8px;
 }
