@@ -183,7 +183,7 @@ header p {
 
 /* Servicios */
 .section h4 {
-  color: var(--accent-color) !important;
+  color: #222 !important;
   margin-bottom: 2rem;
   font-weight: 600;
 }
@@ -280,15 +280,15 @@ h1, h4, h6, .section h4, nav .brand-logo {
 
 /* Mejora de visibilidad para precios y títulos de servicios */
 .card-content strong, .flip-card-back strong {
-  color: #e0e0e0 !important; /* Gris claro para precios */
+  color: #fff !important;
   font-weight: bold;
   font-size: 1.15em;
 }
 
 .section h4 {
-  color: var(--accent-color) !important; /* Amarillo Kodak para títulos de servicios */
+  color: #222 !important;
   font-weight: 700;
   font-size: 2rem;
   letter-spacing: 1px;
-  text-shadow: 1px 1px 4px #222;
+  text-shadow: none;
 }
