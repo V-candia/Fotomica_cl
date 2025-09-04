@@ -112,13 +112,18 @@ header p {
   pointer-events: none;
 }
 .services .card .card-title {
-  position: relative;
+  position: absolute; /* asegurar ubicación sobre la imagen */
+  left: 8px;
+  bottom: 8px;
   z-index: 1;
-  color: #fff !important; /* Título blanco para máximo contraste */
+  display: inline-block;
+  color: #fff !important; /* máximo contraste */
+  background: rgba(0,0,0,0.5); /* fondo semitransparente */
+  padding: 6px 10px;
+  border-radius: 8px;
   text-shadow: 0 2px 8px rgba(0,0,0,0.6);
-  background: rgba(0,0,0,0.35);
-  padding: 4px 8px;
-  border-radius: 6px;
+  backdrop-filter: saturate(120%) blur(2px);
+  -webkit-backdrop-filter: saturate(120%) blur(2px);
 }
 
 /* Limitar tamaño de imágenes en flip-cards */
