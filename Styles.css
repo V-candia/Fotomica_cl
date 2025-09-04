@@ -272,3 +272,14 @@ footer {
 p, li, span, .flow-text {
   color: inherit !important;
 }
+
+/* Títulos de sección claros y legibles sobre fondo oscuro */
+h4,
+.section h4,
+h4.section-title,
+.section-title {
+  color: #f5f5f5 !important;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
