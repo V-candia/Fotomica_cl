@@ -375,5 +375,5 @@ table, thead, tbody, tfoot, tr, th, td,
 
 /* Títulos de flip-cards: mismo color que el precio */
 .flip-card .card-title {
-  color: var(--price-color) !important;
+  color:white !important;
 }
