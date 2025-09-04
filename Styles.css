@@ -372,3 +372,8 @@ table, thead, tbody, tfoot, tr, th, td,
   width: 100%;
   text-align: center;
 }
+
+/* Títulos de flip-cards: mismo color que el precio */
+.flip-card .card-title {
+  color: var(--price-color) !important;
+}
