@@ -40,6 +40,7 @@ header {
   --border-color: #222;
   --input-bg: #222;
   --input-border: #444;
+  --price-color: #222; /* Gris oscuro para precios */
 }
 
 /* Reset básico */
@@ -218,7 +219,7 @@ textarea::placeholder {
 }
 .btn:hover, .btn-small:hover {
   background: #222 !important;
-  color: var(--accent-color) !important;
+  color: var(--text-light) !important;
 }
 
 /* Footer */
@@ -265,14 +266,20 @@ p, li, span, .flow-text, .card-content, .flip-card-back, .flip-card-front {
   color: var(--text-light) !important;
 }
 
-/* Textos destacados en amarillo Kodak solo en títulos */
-h1, h4, h6, .card-title, .section h4, nav .brand-logo {
+/* Textos destacados en amarillo Kodak solo en títulos principales */
+h1, h4, h6, .section h4, nav .brand-logo {
   color: var(--accent-color) !important;
   font-weight: 600;
 }
 
-/* Elimina el rojo de precios y detalles importantes */
+/* Títulos secundarios y card-title en blanco suave */
+.card-title {
+  color: var(--text-light) !important;
+  font-weight: 600;
+}
+
+/* Precios y detalles importantes en gris oscuro, sin rojo ni amarillo */
 .card-content strong, .flip-card-back strong {
-  color: var(--accent-color) !important;
+  color: var(--price-color) !important;
   font-weight: bold;
 }
