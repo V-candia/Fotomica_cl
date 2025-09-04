@@ -300,3 +300,12 @@ h4.section-title,
 .collection-item:last-child {
   border-bottom: none !important;
 }
+
+/* Fondo oscuro y texto claro para la sección de contacto */
+.section#contacto,
+.section#contactar {
+  background-color: #232323 !important;
+  color: #f5f5f5 !important;
+  border-radius: 8px;
+  padding: 32px 0;
+}
