@@ -188,9 +188,11 @@ header p {
 
 /* Servicios */
 .section h4 {
-  color: #222 !important;
+  color: #f5f5f5 !important;
   margin-bottom: 2rem;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 1px;
 }
 
 /* Formulario */
