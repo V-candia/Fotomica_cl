@@ -32,18 +32,20 @@ header {
 
 
 :root {
-  --primary-color: #272626;   
-  --secondary-color: #52514f; 
-  --accent-color: #cac8c8;    
-  --background-color: #8b8680;
-  --text-color: #000000;
-  --card-bg: #c4c4c4;
+  --primary-color: #181818;
+  --accent-color: #ffd100; /* Amarillo Kodak */
+  --text-light: #f5f5f5;
+  --text-dark: #181818;
+  --card-bg: #232323;
+  --border-color: #222;
+  --input-bg: #222;
+  --input-border: #444;
 }
 
 /* Reset básico */
 body {
-  background: #0a0a0a;
-  color: #f5f5f5;
+  background: var(--primary-color);
+  color: var(--text-light);
   margin: 0;
   padding: 0;
 }
@@ -52,43 +54,45 @@ body {
 nav {
   background-color: var(--primary-color) !important;
 }
-nav .brand-logo,
+nav .brand-logo {
+  color: var(--accent-color) !important;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
 nav a {
-  color: #ffd100 !important; 
+  color: var(--text-light) !important;
 }
 
 /* Hero */
-header {
-  background-blend-mode: overlay;
-  background-color: rgba(250, 250, 250, 0.4);
-  height: 40vh;
-}
 header h1 {
   font-size: 3rem;
   font-weight: bold;
-  color: #ffd100; 
+  color: var(--accent-color);
 }
 header p {
   font-size: 1.4rem;
-  color: #f5f5f5; 
+  color: var(--text-light);
 }
 
 /* Tarjetas */
 .card {
-  background: #181818;
+  background: var(--card-bg);
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.8);
-  border: 1px solid #222;
+  border: 1px solid var(--border-color);
 }
 .card:hover {
   transform: translateY(-5px);
 }
 .card-title {
-  background-color: rgba(255, 209, 0, 0.12); 
+  background-color: transparent;
   padding: 4px 10px;
   border-radius: 5px;
-  color: #ffd100 !important; /* Amarillo Kodak */
+  color: var(--accent-color) !important;
+  font-weight: 600;
+  font-size: 1.2rem;
 }
+
 /* Limitar tamaño de imágenes en flip-cards */
 .flip-card-front .card-image img {
   width: 100%;
@@ -110,6 +114,7 @@ header p {
   overflow: hidden;
   position: relative;
 }
+
 /* Flip Card Styles */
 .flip-card {
   background-color: transparent;
@@ -135,7 +140,7 @@ header p {
   backface-visibility: hidden;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  background: #181818;
+  background: var(--card-bg);
 }
 .flip-card-front {
   z-index: 2;
@@ -143,7 +148,6 @@ header p {
   flex-direction: column;
   height: 100%;
 }
-/* Ajuste para que el contenido del frente quede abajo de la imagen */
 .flip-card-front .card-content.center-align {
   position: absolute;
   left: 0;
@@ -151,7 +155,7 @@ header p {
   bottom: 0;
   margin: 0 auto;
   width: 90%;
-  background: rgba(255,255,255,0.85);
+  background: rgba(36,36,36,0.95);
   border-radius: 0 0 12px 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   padding: 12px 8px 8px 8px;
@@ -159,6 +163,7 @@ header p {
   flex-direction: column;
   align-items: center;
   z-index: 2;
+  color: var(--text-light) !important;
 }
 .flip-card-back {
   transform: rotateY(180deg);
@@ -168,7 +173,7 @@ header p {
   justify-content: center;
   padding: 20px;
   z-index: 3;
-  color: #f5f5f5;
+  color: var(--text-light) !important;
 }
 .flip-btn {
   margin-top: 15px;
@@ -177,17 +182,18 @@ header p {
 
 /* Servicios */
 .section h4 {
-  color: #ffd100 !important; 
+  color: var(--accent-color) !important;
   margin-bottom: 2rem;
+  font-weight: 600;
 }
 
 /* Formulario */
 input[type="text"],
 input[type="email"],
 textarea {
-  background: #222 !important;
-  color: #ffd100 !important; 
-  border: 1px solid #ffd100 !important;
+  background: var(--input-bg) !important;
+  color: var(--text-light) !important;
+  border: 1px solid var(--input-border) !important;
   border-radius: 6px;
   padding: 0.8rem;
 }
@@ -196,34 +202,38 @@ textarea:focus {
   border-bottom: 1px solid var(--accent-color) !important;
   box-shadow: 0 1px 0 0 var(--accent-color) !important;
 }
+input::placeholder,
+textarea::placeholder {
+  color: #bdbdbd !important;
+}
 
 /* Botón */
 .btn, .btn-small {
-  background: #ffd100 !important; /* Amarillo Kodak */
-  color: #181818 !important;
+  background: var(--accent-color) !important;
+  color: var(--text-dark) !important;
   border-radius: 8px;
   font-weight: bold;
   box-shadow: 0 2px 8px rgba(255,209,0,0.2);
   transition: background 0.2s;
 }
 .btn:hover, .btn-small:hover {
-  background: #e60012 !important; /* Rojo Kodak */
-  color: #fff !important;
+  background: #222 !important;
+  color: var(--accent-color) !important;
 }
 
 /* Footer */
 footer {
-  background: #181818 !important;
-  color: #ffd100 !important; 
+  background: var(--primary-color) !important;
+  color: var(--text-light) !important;
 }
 
 /* Sidenav */
 .sidenav {
-  background: #181818;
-  color: #ffd100;
+  background: var(--primary-color);
+  color: var(--text-light);
 }
 .sidenav a {
-  color: #ffd100 !important;
+  color: var(--text-light) !important;
 }
 
 /* Animación suave */
@@ -233,34 +243,36 @@ footer {
 
 .carousel .carousel-item img {
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(255,209,0,0.15);
-  border: 2px solid #ffd100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  border: 2px solid var(--card-bg);
 }
 
 .instagram-link img {
-  border: 2px solid #e60012; /* Rojo Kodak */
+  border: 2px solid var(--card-bg);
 }
 
 ::-webkit-scrollbar {
-  background: #181818;
+  background: var(--primary-color);
   width: 8px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #ffd100;
+  background: var(--card-bg);
   border-radius: 8px;
 }
 
 /* Mejora de legibilidad para textos generales */
 p, li, span, .flow-text, .card-content, .flip-card-back, .flip-card-front {
-  color: #f5f5f5 !important;
+  color: var(--text-light) !important;
 }
 
-/* Textos destacados en amarillo Kodak */
-h1, h4, h6, .card-title, .section h4 {
-  color: #ffd100 !important;
+/* Textos destacados en amarillo Kodak solo en títulos */
+h1, h4, h6, .card-title, .section h4, nav .brand-logo {
+  color: var(--accent-color) !important;
+  font-weight: 600;
 }
 
-/* Texto de precios y detalles importantes */
+/* Elimina el rojo de precios y detalles importantes */
 .card-content strong, .flip-card-back strong {
-  color: #e60012 !important; /* Rojo Kodak para destacar */
+  color: var(--accent-color) !important;
+  font-weight: bold;
 }
